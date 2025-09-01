@@ -10,7 +10,6 @@
             wire:model="name"
             :label="__('Nombre')"
             type="text"
-            required
             autofocus
             autocomplete="name"
             :placeholder="__('Nombre')"
@@ -21,7 +20,6 @@
             wire:model="last_name"
             :label="__('Apellido(s)')"
             type="text"
-            required
             autofocus
             autocomplete="name"
             :placeholder="__('Apellido(s)')"
@@ -32,7 +30,6 @@
             wire:model="email"
             :label="__('Correo electrónico')"
             type="email"
-            required
             autocomplete="email"
             placeholder="email@example.com"
         />
@@ -42,7 +39,6 @@
             wire:model="password"
             :label="__('Contraseña')"
             type="password"
-            required
             autocomplete="new-password"
             :placeholder="__('Contraseña')"
             viewable
@@ -53,7 +49,6 @@
             wire:model="password_confirmation"
             :label="__('Confirmar contraseña')"
             type="password"
-            required
             autocomplete="new-password"
             :placeholder="__('Confirmar contraseña')"
             viewable
