@@ -39,6 +39,13 @@ class Register extends Component
 
         event(new Registered(($user = User::create($validated))));
 
+        // Create a default gym for the new user
+        $user->gym()->create([
+            'name' => "My Gym",
+            'address' => null,
+            'phone' => null,
+        ]);
+
         Auth::login($user);
 
         $this->redirect(route('dashboard', absolute: false), navigate: true);
