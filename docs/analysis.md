@@ -11,8 +11,8 @@ ingresos y egresos, balances, etc.
 ## Entidades/Modulos de la aplicación
 
 ### User
-- **Dev (Developer)**: Tiene control total del sistema y puede gestionar todos los gimnasios
-- **Admin**: Es el dueño o administrador de un gimnasio específico
+- **Super Admin**: Tiene control total del sistema y puede gestionar todos los gimnasios
+- **Gym Admin**: Es el dueño o administrador de un gimnasio específico
 - **Datos**:
   - nombre
   - apellido(s)
@@ -22,6 +22,7 @@ ingresos y egresos, balances, etc.
 
 ### Gym
 - Representa cada gimnasio que se registra en la plataforma
+- Cuando un usuario con rol "Gym Admin" se registra, automáticamente se crea un gimnasio asociado a ese usuario
 - **Datos**:
   - nombre del gimnasio
   - dirección completa
