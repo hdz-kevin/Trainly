@@ -4,7 +4,7 @@
         @include('partials.head')
     </head>
     <body class="min-h-screen bg-white dark:bg-zinc-800">
-        <flux:sidebar sticky stashable class="border-e border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
+        <flux:sidebar sticky stashable class="border-e border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900">
             <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
             <a href="{{ route('dashboard') }}" class="me-5 flex items-center space-x-2 rtl:space-x-reverse" wire:navigate>
@@ -14,6 +14,12 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="users" :href="route('dashboard')" :current="request()->routeIs('/')" wire:navigate>{{ __('Socios') }}</flux:navlist.item>
+                    <flux:navlist.item icon="credit-card" :href="route('dashboard')" :current="request()->routeIs('/')" wire:navigate>{{ __('Membresías') }}</flux:navlist.item>
+                    <flux:navlist.item icon="calendar-days" :href="route('dashboard')" :current="request()->routeIs('/')" wire:navigate>{{ __('Visitas') }}</flux:navlist.item>
+                </flux:navlist.group>
+                <flux:navlist.group :heading="__('Configuración')" class="grid">
+                    <flux:navlist.item icon="tag" :href="route('dashboard')" :current="request()->routeIs('/')" wire:navigate>{{ __('Tipos de Membresía') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
 
