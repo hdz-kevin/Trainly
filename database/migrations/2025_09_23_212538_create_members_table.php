@@ -1,6 +1,7 @@
 <?php
 
-use App\Models\User;
+use App\Enums\Gender;
+use App\Models\Gym;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,12 +13,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gyms', function (Blueprint $table) {
+        Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('address')->nullable();
-            $table->string('phone')->nullable();
-            $table->foreignIdFor(User::class)->constrained()->onDelete('restrict');
+            $table->string('name');
+            $table->enum('gender', Gender::values());
+            $table->date('birth_date')->nullable();
+            $table->string('photo')->nullable();
+            $table->foreignIdFor(Gym::class)->constrained()->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('gyms');
+        Schema::dropIfExists('members');
     }
 };
