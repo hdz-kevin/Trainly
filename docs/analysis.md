@@ -1,10 +1,10 @@
 # Trainly
 
-Trainly es una aplicación (web en un inicio) que ayudará a los dueños o administradores de un gimnasio a gestionar
+Trainly es una aplicación web que ayudará a los dueños o administradores de un gimnasio a gestionar
 fácilmente las partes más importantes de su negocio como los socios, membresías, visitas, venta/compra de productos,
 ingresos y egresos, balances, etc.
 
-**Nota**: Las entidades y módulos descritos a continuación son los necesarios para sacar el MVP (Minimum Viable Product) de la aplicación, el cual se enfocará en la gestión de socios, membresías y visitas.
+**Nota**: Las entidades y módulos descritos a continuación son los necesarios para desarrollar el MVP (Minimum Viable Product) de la aplicación, el cual se enfocará en la gestión de socios, membresías y visitas.
 
 <hr>
 
